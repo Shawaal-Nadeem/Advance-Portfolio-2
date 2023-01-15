@@ -1,11 +1,31 @@
 import React from "react";
 import { useEffect } from "react";
 import "./App.css";
-import $ from "jquery";
-import { TimelineMax } from "gsap/gsap-core";
-import { gsap, Power2, Power4 } from "gsap";
+import { styled } from "@mui/material/styles";
+import Paper from "@mui/material/Paper";
+import Grid from "@mui/material/Grid";
 function App() {
+  const Item = styled(Paper)(({ theme }) => ({
+    backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "transparent",
+    ...theme.typography.body2,
+    padding: theme.spacing(1),
+    boxShadow: "none",
+    textAlign: "center",
+    color: theme.palette.text.secondary,
+  }));
   useEffect(() => {
+    document.querySelectorAll(".image-container img").forEach((image) => {
+      image.onclick = () => {
+        document.querySelector(".popup-image").style.display = "block";
+        document.querySelector(".popup-image img").src =
+          image.getAttribute("src");
+      };
+    });
+    document.querySelector(".popup-image span").onclick = () => {
+      document.querySelector(".popup-image").style.display = "none";
+    };
+
+
     const hamburger = document.querySelector(".hamburger");
     const navLinks = document.querySelector(".nav-links");
     const links = document.querySelectorAll(".nav-links li");
@@ -34,8 +54,8 @@ function App() {
     <div>
       <div className="Video-Section">
        <video poster="" loop autoPlay muted>
-          <source src="/assets/v.webm" type="video/webm" />
-          <source src="/assets/v.mp4" type="video/mp4" />
+          <source src="/videos/v.webm" type="video/webm" />
+          <source src="/videos/v.mp4" type="video/mp4" />
         </video>
         <header>
         <nav>
@@ -70,6 +90,88 @@ function App() {
           
         </div>
         </div>
+        <div className="portfolio" id="portfolio">
+          <h1 className="portfolio-heading">PORTFOLIO</h1>
+          <div className="portfolioButtons">
+            <button className="GraphicDesign">Graphic Design</button>
+            <p className="lineDesign">
+              <hr className="sline" />
+            </p>
+            <button className="GraphicDesign">Video Editing</button>
+          </div>
+        </div>
+        <div className="showcase">
+        <Grid container spacing={2}>
+          <Grid item xs={4}>
+            <Item>
+              <div className="image-container">
+                <div className="image">
+                  <img src="/images/d3c.png" />
+                </div>
+              </div>
+            </Item>
+          </Grid>
+          <Grid item xs={4}>
+            <Item>
+              <div className="image-container">
+                <div className="image">
+                  <img src="/images/d3c.png" />
+                </div>
+              </div>
+            </Item>
+          </Grid>
+          <Grid item xs={4}>
+            <Item>
+              <div className="image-container">
+                <div className="image">
+                  <img src="/images/d3c.png" />
+                </div>
+              </div>
+            </Item>
+          </Grid>
+          <Grid item xs={8}>
+            <Item>
+              <div className="image-container">
+                <div className="image">
+                  <img src="/images/d3l.png" />
+                </div>
+              </div>
+            </Item>
+          </Grid>
+          <Grid item xs={4}>
+            <Item>
+              <div className="image-container">
+                <div className="image">
+                  <img src="/images/d3c.png" />
+                </div>
+              </div>
+            </Item>
+          </Grid>
+        </Grid>
+        <div className="popup-image">
+          <span>&times;</span>
+          <img src="/images/d3c.png" alt="" />
+        </div>
+        <div className="popup-image">
+          <span>&times;</span>
+          <img src="/images/d3c.png" alt="" />
+        </div>
+        <div className="popup-image">
+          <span>&times;</span>
+          <img src="/images/d3c.png" alt="" />
+        </div>
+        <div className="popup-image">
+          <span>&times;</span>
+          <img src="/images/d3l.png" alt="" />
+        </div>
+        <div className="popup-image">
+          <span>&times;</span>
+          <img src="/images/d3c.png" alt="" />
+        </div>
+        <div className="viewbtn">
+        <button className="viewMore">View More</button>
+        </div>
+      </div>
     </div>
   );
 }

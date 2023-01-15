@@ -34,10 +34,8 @@ nav{
     height: 6rem;
     width: 100vw;
     background: transparent;
-    display: flex;
-    position: fixed;
+    display: flex;    
     z-index: 10;
-    margin-top: -8%;
 }
 
 /*Styling Links*/
@@ -190,7 +188,7 @@ video {
         -webkit-text-fill-color: transparent;
       display: flex;
       margin-left: 3.3%;
-      margin-top: 8%;
+      margin-top: 1%;
       font-family: 'Sofia Sans Extra Condensed', sans-serif;
       font-weight: 800;
       font-size: 90px;
@@ -233,8 +231,156 @@ video {
       color: #FFFFFF;
       margin-top: -0.5%;
       }
-
-
+      .portfolio
+      {
+        margin-bottom: 25%;
+      }
+      .portfolio-heading
+      {
+      text-align: center;
+      font-family: 'Leiko';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 48px;
+      color: #FFFFFF;
+      line-height: 500%;
+      margin-bottom: 5%;
+      }
+      .GraphicDesign
+      {
+        width: 18%;
+      box-sizing: border-box;
+      background: #7900E0;
+      border: transparent;
+      border-radius: 10px;
+      font-family: 'Poppins';
+      font-style: normal;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 60px;
+      color: white;
+      }
+      .GraphicDesign:hover
+      {
+        box-shadow: 0 0 50px #7900E0;
+      }
+      .portfolioButtons
+      {
+        display: flex;
+        align-items: center;
+        justify-content:center;
+      }
+      .lineDesign
+      {
+        box-sizing: border-box;
+        background: transparent
+      }
+      .sline
+      {
+      width: 300px;
+      display: block;
+      border: 2px solid #FFFFFF;
+      transform: rotate(90.09deg);
+      }
+      .showcase
+      {
+        margin-bottom: 5%;
+      }
+      .designHeading
+      {
+        font-family: 'Leiko';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 50px;
+      color: #050C22;
+      }
+      .image-container
+      {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+        padding: 10px;
+        transition: transform .4s;
+      }
+      .image-container:hover
+      {
+        transform: scale(1.1); 
+      }
+      .image
+      {
+        height: auto;
+        width: 90%;
+        overflow: hidden;
+        cursor: pointer;
+      }
+      .image:hover
+      {
+        box-shadow: 0 0 100px #7900E0;
+      }
+      .image img
+      {
+        height: auto;
+      width: 100%;
+      border: 8px solid #2D0453;
+      border-radius: 20px;
+      object-fit: cover;
+      }
+      
+      .popup-image
+      {
+        position: fixed;
+        top: 0;;left: 0;
+        background: rgba(0, 0, 0, .9);
+        height: 100%;
+        width: 100%;
+        z-index: 100;
+        display: none;
+      }
+      .popup-image span
+      {
+      position: absolute;
+      top: 0;right: 10px;
+      font-size: 60px;
+      font-weight: bolder;
+      color: #fff;
+      cursor: pointer;
+      z-index: 100;
+      }
+      .popup-image img
+      {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%,-50%);
+      border: 5px solid #fff;
+      border-radius: 5px;
+      width: 750px;
+      height: auto;
+      object-fit: cover;
+      }
+      .viewbtn
+      {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .viewMore
+      {
+      width: 170px;
+      height: 60px;
+      background: #7900E0;
+      border-radius: 4px;
+      border-color: transparent;
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      color: #FFFFFF;
+      }
+      .viewMore:hover
+      {
+        box-shadow: 0 0 50px #7900E0;
+      }
 /*Stying for small screens*/
 @media screen and (max-width: 900px){
     nav{
@@ -242,16 +388,14 @@ video {
         width: 100vw;
         background: transparent;
         display: flex;
-        position: fixed;
         z-index: 10;
-        margin-top: -10%;
     }
     .hamburger{
         display:block;
         position: absolute;
         cursor: pointer;
         right: 5%;
-        top: 50%;
+        top: 8%;
         transform: translate(-5%, -50%);
         z-index: 2;
         transition: all 0.7s ease;
@@ -321,10 +465,10 @@ video {
         -webkit-text-fill-color: transparent;
       display: flex;
       margin-left: 3.3%;
-      margin-top: 10%;
       font-family: 'Sofia Sans Extra Condensed', sans-serif;
       font-weight: 750;
       font-size: 80px;
+      margin-top: -2%;
       }
       .mannan
       {
@@ -402,24 +546,72 @@ video {
       {
         box-shadow: 0 0 40px #7900E0;
       }
-      
+      .portfolio
+      {
+        margin-bottom: 25%;
+      }
+      .portfolio-heading
+      {
+      text-align: center;
+      font-family: 'Leiko';
+      font-style: normal;
+      font-weight: 550;
+      font-size: 38px;
+      color: #FFFFFF;
+      line-height: 500%;
+      margin-bottom: 15%;
+      }
+      .GraphicDesign
+      {
+        width: 40%;
+      box-sizing: border-box;
+      background: #7900E0;
+      border: transparent;
+      border-radius: 10px;
+      font-family: 'Poppins';
+      font-style: normal;
+      font-size: 19px;
+      line-height: 60px;
+      font-weight: 700;
+      color: white;
+      }
+      .GraphicDesign:hover
+      {
+        box-shadow: 0 0 50px #7900E0;
+      }
+      .portfolioButtons
+      {
+        display: flex;
+        align-items: center;
+        justify-content:center;
+      }
+      .lineDesign
+      {
+        box-sizing: border-box;
+        background: transparent
+      }
+      .sline
+      {
+      width: 300px;
+      display: block;
+      border: 2px solid #FFFFFF;
+      transform: rotate(90.09deg);
+      }
 }
 @media screen and (max-width: 660px){
     nav{
         height: 6rem;
         width: 100vw;
         background: transparent;
-        display: flex;
-        position: fixed;
+        display: flex;       
         z-index: 10;
-        margin-top: -13%;
     }
     .hamburger{
         display:block;
         position: absolute;
         cursor: pointer;
-        right: 5%;
-        top: 50%;
+        right: 10%;
+        top: 8%;
         transform: translate(-5%, -50%);
         z-index: 2;
         transition: all 0.7s ease;
@@ -487,8 +679,8 @@ video {
       }
       .brand{
         font-style: normal;
-        font-weight: 600;
-        font-size: 19px;
+        font-weight: 500;
+        font-size: 23px;
         color: #FFFFFF;
         text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         font-family: 'Poppins';	
@@ -501,7 +693,7 @@ video {
         -webkit-text-fill-color: transparent;
       display: flex;
       margin-left: 3.3%;
-      margin-top: 10%;
+      margin-top: -3%;
       font-family: 'Sofia Sans Extra Condensed', sans-serif;
       font-weight: 600;
       font-size: 35px;
@@ -582,6 +774,57 @@ video {
       {
         box-shadow: 0 0 20px #7900E0;
       }
+      .portfolio
+      {
+        margin-bottom: 25%;
+      }
+      .portfolio-heading
+      {
+      text-align: center;
+      font-family: 'Leiko';
+      font-style: normal;
+      font-weight: 550;
+      font-size: 38px;
+      color: #FFFFFF;
+      line-height: 500%;
+      margin-bottom: 15%;
+      }
+      .GraphicDesign
+      {
+        width: 40%;
+      box-sizing: border-box;
+      background: #7900E0;
+      border: transparent;
+      border-radius: 10px;
+      font-family: 'Poppins';
+      font-style: normal;
+      font-size: 16px;
+      line-height: 60px;
+      font-weight: 600;
+      color: white;
+      }
+      .GraphicDesign:hover
+      {
+        box-shadow: 0 0 50px #7900E0;
+      }
+      .portfolioButtons
+      {
+        display: flex;
+        align-items: center;
+        justify-content:center;
+      }
+      .lineDesign
+      {
+        box-sizing: border-box;
+        background: transparent
+      }
+      .sline
+      {
+      width: 300px;
+      display: block;
+      border: 2px solid #FFFFFF;
+      transform: rotate(90.09deg);
+      }
 }
 @media screen and (max-width: 580px){
     nav{
@@ -589,19 +832,22 @@ video {
         width: 100vw;
         background: transparent;
         display: flex;
-        position: fixed;
         z-index: 10;
-        margin-top: -13%;
+        margin-top: -4%;
     }
     .hamburger{
         display:block;
         position: absolute;
         cursor: pointer;
-        right: 5%;
-        top: 48%;
+        right: 10%;
+        top: 4.5%;
         transform: translate(-5%, -50%);
         z-index: 2;
         transition: all 0.7s ease;
+    }
+    .hamburger div
+    {
+        height: 2px;
     }
     .nav-links{
         position: fixed;
@@ -661,8 +907,8 @@ video {
       }
       .brand{
         font-style: normal;
-        font-weight: 600;
-        font-size: 19px;
+        font-weight: 500;
+        font-size: 14px;
         color: #FFFFFF;
         text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         font-family: 'Poppins';	
@@ -675,7 +921,7 @@ video {
         -webkit-text-fill-color: transparent;
       display: flex;
       margin-left: 3.3%;
-      margin-top: 10%;
+      margin-top: -7%;
       font-family: 'Sofia Sans Extra Condensed', sans-serif;
       font-weight: 600;
       font-size: 35px;
@@ -756,6 +1002,57 @@ video {
       {
         box-shadow: 0 0 20px #7900E0;
       }
+      .portfolio
+      {
+        margin-bottom: 25%;
+      }
+      .portfolio-heading
+      {
+      text-align: center;
+      font-family: 'Leiko';
+      font-style: normal;
+      font-weight: 450;
+      font-size: 30px;
+      color: #FFFFFF;
+      line-height: 500%;
+      margin-bottom: 15%;
+      }
+      .GraphicDesign
+      {
+        width: 30%;
+      box-sizing: border-box;
+      background: #7900E0;
+      border: transparent;
+      border-radius: 10px;
+      font-family: 'Poppins';
+      font-style: normal;
+      font-size: 12px;
+      line-height: 60px;
+      font-weight: 600;
+      color: white;
+      }
+      .GraphicDesign:hover
+      {
+        box-shadow: 0 0 50px #7900E0;
+      }
+      .portfolioButtons
+      {
+        display: flex;
+        align-items: center;
+        justify-content:center;
+      }
+      .lineDesign
+      {
+        box-sizing: border-box;
+        background: transparent
+      }
+      .sline
+      {
+      width: 200px;
+      display: block;
+      border: 2px solid #FFFFFF;
+      transform: rotate(90.09deg);
+      }
 }
 @media screen and (max-width: 470px){
     nav{
@@ -763,16 +1060,14 @@ video {
         width: 100vw;
         background: transparent;
         display: flex;
-        position: fixed;
         z-index: 10;
-        margin-top: -20%;
     }
     .hamburger{
         display:block;
         position: absolute;
         cursor: pointer;
         right: 10%;
-        top: 48%;
+        top: 5%;
         transform: translate(-5%, -50%);
         z-index: 2;
         transition: all 0.7s ease;
@@ -853,7 +1148,7 @@ video {
         -webkit-text-fill-color: transparent;
       display: flex;
       margin-left: 3.3%;
-      margin-top: 12%;
+      margin-top: -7%;
       font-family: 'Sofia Sans Extra Condensed', sans-serif;
       font-weight: 600;
       font-size: 35px;
@@ -933,6 +1228,58 @@ video {
       .hirebtn:hover
       {
         box-shadow: 0 0 20px #7900E0;
+      }
+      .portfolio
+      {
+        margin-bottom: 25%;
+      }
+      .portfolio-heading
+      {
+      text-align: center;
+      font-family: 'Leiko';
+      font-style: normal;
+      font-weight: 450;
+      font-size: 30px;
+      color: #FFFFFF;
+      line-height: 500%;
+      margin-bottom: 15%;
+      }
+      .GraphicDesign
+      {
+        width: 40%;
+      box-sizing: border-box;
+      background: #7900E0;
+      border: transparent;
+      border-radius: 8px;
+      font-family: 'Poppins';
+      font-style: normal;
+      font-size: 10px;
+      line-height: 30px;
+      font-weight: 600;
+      color: white;
+      height: 32px;
+      }
+      .GraphicDesign:hover
+      {
+        box-shadow: 0 0 50px #7900E0;
+      }
+      .portfolioButtons
+      {
+        display: flex;
+        align-items: center;
+        justify-content:center;
+      }
+      .lineDesign
+      {
+        box-sizing: border-box;
+        background: transparent
+      }
+      .sline
+      {
+      width: 150px;
+      display: block;
+      border: 1px solid #FFFFFF;
+      transform: rotate(90.09deg);
       }
 }
 
