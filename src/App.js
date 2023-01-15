@@ -32,6 +32,7 @@ function App() {
   });
   return (
     <div>
+      <div className="Video-Section">
        <video poster="" loop autoPlay muted>
           <source src="/assets/v.webm" type="video/webm" />
           <source src="/assets/v.mp4" type="video/mp4" />
@@ -54,7 +55,7 @@ function App() {
                 
     </nav>
 </header>
-{/* <div>
+<div className="name-section">
           <h1 className="abdul">ABDUL</h1>
           <h1 className="mannan">MANNAN</h1>
 
@@ -66,9 +67,9 @@ function App() {
           
           <p className="read">Read More...</p>
            <button className="hirebtn">Hire Me</button> 
-          <div className='a'> <span className="sbtn">Hire Me</span>
-        <div className="liquid"></div></div>
-        </div> */}
+          
+        </div>
+        </div>
     </div>
   );
 }
