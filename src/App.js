@@ -172,6 +172,74 @@ function App() {
         <button className="viewMore">View More</button>
         </div>
       </div>
+      <div className="about">
+        <div className="rectangle-box">
+          <div className="rectangle">
+            <div className="passport-pic"></div>
+          </div>
+        </div>
+        <div className="about-text" id="about">
+          <h1 className="about-heading">About</h1>
+          <p className="about-lines">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. It has survived not
+            only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged. It was popularised in the 1960s
+            with the release of Letraset sheets containing Lorem Ipsum passages,
+            and more recently with desktop publishing software like...
+          </p>
+        </div>
+      </div>
+      <div className="Expertise-sections">
+          <h1 className="expertise-heading">Fields of Expertise</h1>
+          <div className="expertise">
+            <div className="list1">
+            <h4 className="expertise-head">1. Graphic Design  </h4>
+              <ul className="expertise-list">
+                <li className="points">Thumbnails/ banner design</li>
+                <li className="points">Advertisment, Social media Posts</li>
+                <li className="points">Flyers, Brochures, Menu Design</li>
+                <li className="points">UI/UX Design</li>
+                <li className="points">PhotoEditing</li>
+                <li className="points">3D Artworks</li>
+                <li className="points">Posters/Artworks...</li>
+              </ul>
+            </div>
+            <div className="list2">
+            <h4 className="expertise-head">2. Video Editing  </h4>
+              <ul className="expertise-list">
+                <li className="points">Gaming Montages</li>
+                <li className="points">Youtube Videos</li>
+                <li className="points">Animations 2D/3D</li>
+                <li className="points">Intros</li>
+                <li className="points">Advertisment</li>
+                <li className="points">Advertisment</li>
+                <li className="points">Advertisment</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div className="softwares">
+          <h4 className="softwares_head">Softwares I use</h4>
+          <ul className="software-list">
+                <li className="soft_points">Adobe PhotoShop</li>
+                <li className="soft_points">Adobe Illustrator</li>
+                <li className="soft_points">Adobe Premier Pro</li>
+                <li className="soft_points">Adobe After Effects</li>
+                <li className="soft_points">Adobe xd/Figma</li>
+                <li className="soft_points">Blender</li>
+              </ul>
+        </div>
+        <div className="contact-section" id="contact">
+          <br/>
+          <h4 className="contact-head">Contact</h4>
+          <div className="links">
+          <p className="insta-links">+92 300 4256110</p>
+          </div>
+          <button className="mail-btn">Click to send mail</button>
+        </div>
     </div>
   );
 }
