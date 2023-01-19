@@ -174,7 +174,7 @@ function App() {
         <button className="viewMore">View More</button>
         </div>
       </div>
-      <div className="about">
+      {/* <div className="about">
         <div className="rectangle-box">
           <div className="rectangle">
             <div className="passport-pic"></div>
@@ -193,7 +193,7 @@ function App() {
             and more recently with desktop publishing software like...
           </p>
         </div>
-      </div>
+      </div> */}
       <div className="Expertise-sections">
           <h1 className="expertise-heading">Fields of Expertise</h1>
           <div className="expertise">
@@ -269,11 +269,11 @@ function App() {
         </div>
 </div>
           </div>
-          <div className="m-btn">
-          <button className="mail-btn">Click to send mail</button>
-          </div>
           <div className="links">
           <p className="insta-links">+92 300 4256110</p>
+          </div>
+          <div className="m-btn">
+          <button className="mail-btn">Click to send mail</button>
           </div>
         </div>
     </div>
