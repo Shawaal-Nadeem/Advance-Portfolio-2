@@ -1,4 +1,5 @@
 import React from "react";
+import $ from 'jquery';
 import { useEffect } from "react";
 import "./App.css";
 import { styled } from "@mui/material/styles";
@@ -49,6 +50,7 @@ function App() {
           hamburger.classList.remove("toggle");
         });
     });
+   
   });
   return (
     <div>
@@ -235,10 +237,44 @@ function App() {
         <div className="contact-section" id="contact">
           <br/>
           <h4 className="contact-head">Contact</h4>
+          <div className="phone">
+          <div class="container">
+            <img src="/images/phone.png"></img>
+        <div class="button">
+            <div class="icon">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+            </div>
+            <span>Facebook</span>
+        </div>
+
+        <div class="button">
+            <div class="icon">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+            </div>
+            <span>Instagram</span>
+        </div>
+
+        <div class="button">
+            <div class="icon">
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </div>
+            <span>Linkedin</span>
+        </div>
+
+        <div class="button">
+            <div class="icon">
+                <i class="fa fa-youtube-play" aria-hidden="true"></i>
+            </div>
+            <span>Youtube</span>
+        </div>
+</div>
+          </div>
+          <div className="m-btn">
+          <button className="mail-btn">Click to send mail</button>
+          </div>
           <div className="links">
           <p className="insta-links">+92 300 4256110</p>
           </div>
-          <button className="mail-btn">Click to send mail</button>
         </div>
     </div>
   );
