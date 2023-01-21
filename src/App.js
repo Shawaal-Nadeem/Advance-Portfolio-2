@@ -62,11 +62,14 @@ function App() {
         <header>
         <nav>
         <h1 className="logo"><a href="index.html" class="brand">PORTFOLIO</a></h1>
-        <div class="hamburger">
+        <div className="burger-background">
+          <div class="hamburger">
             <div class="line1"></div>
             <div class="line2"></div>
             <div class="line3"></div>
         </div>
+        </div>
+        {/* <div className="burger-background"></div> */}
         <ul className="nav-links">
                     <li><a href="#" className='navbtn-home'>Home</a></li>
                     <li><a href="#portfolio" className='navbtn'>Portfolio</a></li>
@@ -83,8 +86,8 @@ function App() {
 
           <p className="line">
             Professional &nbsp;<span>Graphic&nbsp;Designer </span>&nbsp;and&nbsp;<span> &nbsp;Video&nbsp;Editor </span>.</p>
-            <p className="line1">With over 2 years of experience in Adobe PhotoShop,</p> 
-            <p className="line1">Adobe
+            <p className="line-v">With over 2 years of experience in Adobe PhotoShop,</p> 
+            <p className="line-v">Adobe
             Illustrator, Premier Pro, After Effects, and Blender.</p>
           
           <p className="read">Read More...</p>
@@ -131,11 +134,20 @@ function App() {
               </div>
             </Item>
           </Grid>
-          <Grid item xs={8}>
+          <Grid item xs={4}>
             <Item>
               <div className="image-container">
                 <div className="image">
-                  <img src="/images/d3l.png" />
+                  <img src="/images/d3c.png" />
+                </div>
+              </div>
+            </Item>
+          </Grid>
+          <Grid item xs={4}>
+            <Item>
+              <div className="image-container">
+                <div className="image">
+                  <img src="/images/d3c.png" />
                 </div>
               </div>
             </Item>
@@ -170,10 +182,10 @@ function App() {
           <span>&times;</span>
           <img src="/images/d3c.png" alt="" />
         </div>
-        <div className="viewbtn">
+      </div>
+      <div className="viewbtn">
         <button className="viewMore">View More</button>
         </div>
-      </div>
       {/* <div className="about">
         <div className="rectangle-box">
           <div className="rectangle">
@@ -225,19 +237,12 @@ function App() {
         </div>
         <div className="softwares">
           <h4 className="softwares_head">Softwares I use</h4>
-          <ul className="software-list">
-                <li className="soft_points">Adobe PhotoShop</li>
-                <li className="soft_points">Adobe Illustrator</li>
-                <li className="soft_points">Adobe Premier Pro</li>
-                <li className="soft_points">Adobe After Effects</li>
-                <li className="soft_points">Adobe xd/Figma</li>
-                <li className="soft_points">Blender</li>
-              </ul>
+          <img className="softwarepic" src="/images/software.png"></img>
         </div>
         <div className="contact-section" id="contact">
           <br/>
           <h4 className="contact-head">Contact</h4>
-          <div className="phone">
+          {/* <div className="phone">
           <div class="container">
             <img src="/images/phone.png"></img>
         <div class="button">
@@ -268,7 +273,7 @@ function App() {
             <span>Youtube</span>
         </div>
 </div>
-          </div>
+          </div> */}
           <div className="links">
           <p className="insta-links">+92 300 4256110</p>
           </div>
