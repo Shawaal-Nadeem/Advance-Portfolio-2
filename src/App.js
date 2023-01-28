@@ -342,7 +342,7 @@ function App() {
               </a>
               <a
                 class="social-icon github"
-                href=""
+                href="https://github.com/MannanBabar16"
                 target="_blank"
                 rel="author"
               >
