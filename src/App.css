@@ -128,16 +128,7 @@ video {
         text-decoration: none;
         transform: scale(1.5);
       }
-      /* .navbtn-home:after 
-      {
-        content: '';
-      display:block;
-        position: relative;
-        width: 20%;
-        margin-left: 40%;
-        border: 2px solid #FFFFFF;
-        margin-top: 8px; 
-      } */
+      
       .navbtn-home:hover{
         color: #FFFFFF;
         text-decoration: none;
@@ -181,6 +172,7 @@ video {
     {
             background: transparent;
             color: #7900E0;
+            cursor: pointer;
     }
       .abdul
       {
@@ -389,64 +381,43 @@ video {
        background: transparent;
        color: #7900E0;
       }
+
+
 .about
 {
- margin-top: 9%;
+  margin-top: 10%;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: row;
-  margin-bottom: 4%;
-  margin-left: 8%;
+  margin-bottom: 10%;
 }
+.passport-pic img
+{
+width: 85%;
 
-.rectangle
-{
-  margin-top: -105%;
-  margin-left: -6%;
-  width: 200px;
-  height: 200px;
-  background: #050D24;
-}
-.passport-pic
-{
-width: 462px;
-height: 481px;
-background: #050D24;
-background: url("/public/images/p1.png");
-background-size: 130px,130px;
-background-repeat: no-repeat;
-background-position: 30px 35px ;
-border-radius: 50px;
-}
-.rectangle-shadow
-{
-width: 198px;
-height: 185px;
-background: rgba(5, 13, 36, 0.2);
-}
-.about-text
-{
-  margin-left: 3%;
 }
 .about-heading
 {
-font-family: 'Leiko';
-font-style: normal;
-font-weight: 300;
-font-size: 65px;
-color: #FFFFFF;
-display: flex;
-justify-content: left;
+  margin-top: 3%;
+  font-family: 'Leiko';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 55px;
+  color: #FFFFFF;
 }
 .about-lines
 {
 font-family: 'Poppins';
 font-style: normal;
-font-weight: 300;
-font-size: 17px;
-line-height: 48px;
+font-weight: 200;
+font-size: 20px;
 color: #FFFFFF;
+line-height: 1.3;
+
+}
+.phone-about-lines
+{
+  display: none;
 }
 .Expertise-sections
 {
@@ -545,25 +516,131 @@ font-weight: 400;
 font-size: 50px;
 color: #FFFFFF;
 text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+margin-bottom: 3%;
 }
-.phone
+.c-icons
 {
-    margin-top: 5%;
-}
-.links
-{
-  margin-top: 4%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.insta-links
+:root {
+  --link-size: 64px;
+  --trans-props: all 0.3s ease;
+}
+
+.wrapper,
+.social-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+
+/*** Containers and icons ***/
+
+.social-icon {
+  display: flex;
+
+  position: relative;
+  overflow: hidden; /* Trim branded overlays */
+
+  width: var(--link-size);
+  height: var(--link-size);
+  margin: 8px;
+
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12);
+
+  text-decoration: none;
+
+  transition: var(--trans-props);
+}
+
+.social-icon i {
+  margin: auto; /* Perfect centering thanks to parental flex */
+
+  font-size: 24px;
+  color: hsl(212, 16%, 48%);
+
+  z-index: 1; /* Make sure icons will be on top */
+
+  transition: var(--trans-props);
+}
+
+/*** Branded overlays from the bottom ***/
+
+.social-icon:after {
+  content: "";
+
+  width: var(--link-size);
+  height: var(--link-size);
+
+  position: absolute;
+
+  transform: translate(0, var(--link-size));
+
+  border-radius: 50%;
+  transition: var(--trans-props);
+}
+
+.social-icon.facebook:after {
+  background-color: rgba(66 103 178);
+}
+.social-icon.linkedin:after
+{
+  background-color: #0072b1;
+}
+.social-icon.youtube:after
+{
+  background-color: #FF0000;
+}
+.social-icon.github:after {
+  background-color: #24292e;
+}
+
+.social-icon.instagram:after {
+  background-image: linear-gradient(
+    to bottom left,
+    #4f5bd5,
+    #962fbf,
+    #d62976,
+    #fa7e1e,
+    #feda75
+  );
+}
+
+/*** Animations ***/
+
+.social-icon:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.16);
+}
+
+.social-icon:hover i {
+  /*  transform: scale(1.1); */
+  color: #fff;
+}
+
+.social-icon:hover:after {
+  transform: translate(0) scale(1.2);
+}
+.last
+{
+  margin-top: 3%;
+  display: flex;
+align-items: center;
+justify-content: space-between;
+}
+.num
 {
 font-family: 'Poppins';
 font-style: normal;
 font-weight: 300;
 font-size: 15px;
 color: #FFFFFF;
+margin-left: 3.5%;
 }
 .m-btn
 {
@@ -587,110 +664,56 @@ box-shadow: 0 0 20px #7900E0;
 border-radius: 10px;
 border: transparent;
 }
+#progress {
+    position: fixed;
+    bottom: 80px;
+    right: 10px;
+    height: 70px;
+    width: 70px;
+    display: none;
+    place-items: center;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 1;
+  }
+  #progress-value {
+    display: block;
+    height: calc(100% - 15px);
+    width: calc(100% - 15px);
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 39px;
+    color: #2D0453;
+  }
+  #progress-value:hover
+  {
+    background-color: #2D0453;
+    color: #FFFFFF;
+  }
+ 
 .mail-btn:hover
       {
        background: transparent;
        color: #7900E0;
+       cursor: pointer;
       }
-/* .container
-{
-   position: relative;
- display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.container img
-{
-    width: 22%;
-position: absolute;
-}
-.container .button{
-  display: inline-block;
-  height: 60px;
-  width: 60px;
-  float: left;
-  margin: 0 5px;
-  background: #fff;
-  border-radius: 50px;
-  cursor: pointer;
-  box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
-  transition: all 0.5s ease-out;
-  z-index: 1;
-  margin-top: 2%;
-}
-
-.container .button .icon{
-  display: inline-block;
-  text-align: center;
-  height: 60px;
-  width: 60px;
-  border-radius: 50px;
-  box-sizing: border-box;
-  line-height: 60px;
-  transition: all 0.5s ease-out;
-}
-
-.container .button .icon i{
-  font-size: 25px;
-  line-height: 60px;
-  transition: all 0.5s ease-out;
-}
-
-.container .button  span{
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 60px;
-  margin-left: 10px;
-  transition: all 0.5s ease-out;
-}
-
-.container .button:hover{
-  width: 200px;
-}
-
-.container .button{
-  overflow: hidden;
-}
-
-.container .button:nth-child(2):hover .icon{
-  background: #4267B2;
-}
-.container .button:nth-child(3):hover .icon{
-  background: #e4405f;
-}
-.container .button:nth-child(4):hover .icon{
-  background: #0077B5;
-}
-.container .button:nth-child(5):hover .icon{
-    background: #cd201f;
-}
-.container .button:nth-child(6):hover .icon{
-  background: #cd201f;
-}
-
-.container .button:hover .icon i{
-  color: #fff;
-}
-
-
-.container .button:nth-child(2) span{
-  color: #4267B2;
-}
-.container .button:nth-child(3) span{
-  color: #e4405f;
-}
-.container .button:nth-child(4) span{
-  color: #0077B5;
-}
-.container .button:nth-child(5) span{
-    color: #cd201f;
-}
-.container .button:nth-child(6) span{
-  color: #cd201f;
-} */
+      
 /*Stying for small screens*/
+@media screen and (max-width: 1068px)
+{
+  .about-lines
+  {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 200;
+  font-size: 15.5px;
+  color: #FFFFFF;
+  line-height: 1.2;
+  }
+}
 @media screen and (max-width: 900px){
     nav{
         height: 6rem;
@@ -736,7 +759,7 @@ position: absolute;
     }
     .nav-links.open{
         clip-path: circle(1000px at 90% -10%);
-        -webkit-clip-path: circle(1000px at 90% -10%);
+        -webkit-clip-path: circle(1000px at 80% -10%);
         pointer-events: all;
     }
     .nav-links li{
@@ -816,6 +839,7 @@ position: absolute;
       line-height: 38px;
       color: #FFFFFF;
       margin-top: -1.3%;
+      
       }
       .line-v
       {
@@ -1014,136 +1038,47 @@ position: absolute;
       }
      
       .about
-{
- margin-top: 9%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  margin-bottom: 4%;
-  margin-left: 8%;
-}
-
-.rectangle
-{
-  margin-top: -105%;
-  margin-left: -6%;
-  width: 200px;
-  height: 200px;
-  background: #050D24;
-}
-.passport-pic
-{
-width: 462px;
-height: 481px;
-background: #050D24;
-background: url("/public/images/p1.png");
-background-size: 130px,130px;
-background-repeat: no-repeat;
-background-position: 30px 35px ;
-border-radius: 50px;
-}
-.rectangle-shadow
-{
-width: 198px;
-height: 185px;
-background: rgba(5, 13, 36, 0.2);
-}
-.about-text
-{
-  margin-left: 3%;
-  margin-top: 17%;
-}
-.about-heading
-{
-font-family: 'Leiko';
-font-style: normal;
-font-weight: 300;
-font-size: 65px;
-color: #FFFFFF;
-display: flex;
-justify-content: left;
-}
-.about-lines
-{
-font-family: 'Poppins';
-font-style: normal;
-font-weight: 200;
-font-size: 14px;
-line-height: 48px;
-color: #FFFFFF;
-}
-/* .Expertise-sections
-{
-  margin-bottom: 8%;
-}
-.expertise-heading
-{
-    text-align: center;
-      font-family: 'Leiko';
+      {
+        margin-top: 10%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-bottom: 10%;
+      }
+      .passport-pic
+      {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .passport-pic img
+      {
+      width: 50%;
+      
+      }
+      .about-heading
+      {
+        text-align: center;
+        margin-top: 3%;
+        font-family: 'Leiko';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 50px;
+        color: #FFFFFF;
+      }
+      .about-lines
+      {
+        margin-top: 3%;
+      font-family: 'Poppins';
       font-style: normal;
-      font-weight: 400;
-      font-size: 48px;
+      font-weight: normal;
+      font-size: 16px;
       color: #FFFFFF;
-      line-height: 500%;
-}
-.expertise
-{
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-direction: row;
-  margin-bottom: 4%;
-}
-.expertise-head
-{
-  font-family: 'Poppins';
-font-style: normal;
-font-weight: 400;
-font-size: 29px;
-line-height: 54px;
-color: #FFFFFF;
-  list-style-type: none;
-  margin-left: -10%;
-}
-.points
-{
-    list-style-type: disc;
-  margin-top: 4%;
-  font-size: 18px;
-  font-family: 'Poppins';
-  font-style: normal;
-color: #FFFFFF;
-}
-.softwares
-{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-.softwares_head
-{ 
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 36px;
-  color: #FFFFFF;
-  list-style-type: none;
-  }
-  .software-list
-  {
-    margin-top: 1%;
-  }
-  .soft_points
-{
-  margin-top: 4%;
-  margin-left: 0%;
-  font-size: 20px;
-  font-family: 'Poppins';
-  font-style: normal;
-  color: #FFFFFF;
-} */
+      line-height: 1.3;
+      
+      }
+
 }
 @media screen and (max-width: 770px){
     .hamburger{
@@ -1510,66 +1445,7 @@ color: #FFFFFF;
         box-shadow: 0 0 20px #7900E0;  
     }
       
-      .about
-      {
-       margin-top: 9%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: row;
-        margin-bottom: 4%;
-        margin-left: 8%;
-      }
       
-      .rectangle
-      {
-        margin-top: -105%;
-        margin-left: -6%;
-        width: 200px;
-        height: 200px;
-        background: #050D24;
-      }
-      .passport-pic
-      {
-      width: 462px;
-      height: 481px;
-      background: #050D24;
-      background: url("/public/images/p1.png");
-      background-size: 130px,130px;
-      background-repeat: no-repeat;
-      background-position: 30px 35px ;
-      border-radius: 50px;
-      }
-      .rectangle-shadow
-      {
-      width: 198px;
-      height: 185px;
-      background: rgba(5, 13, 36, 0.2);
-      }
-      .about-text
-      {
-        margin-left: 3%;
-        margin-top: 17%;
-      }
-      .about-heading
-      {
-      font-family: 'Leiko';
-      font-style: normal;
-      font-weight: 200;
-      font-size: 50px;
-      color: #FFFFFF;
-      display: flex;
-      justify-content: left;
-      }
-      .about-lines
-      {
-      font-family: 'Poppins';
-      font-style: normal;
-      font-weight: 150;
-      font-size: 10px;
-      line-height: 48px;
-      color: #FFFFFF;
-      }
       .Expertise-sections
       {
       margin-bottom: 8%;
@@ -1712,6 +1588,24 @@ color: #FFFFFF;
       }
       
 }
+@media screen and (max-width: 632px){
+ 
+      .about-lines
+      {
+        margin-top: 3%;
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: normal;
+      font-size: 13px;
+      color: #FFFFFF;
+      line-height: 1.3;
+      
+      }
+      #progress
+       {
+        display: none;
+       }
+}
 @media screen and (max-width: 580px){
    body
    {
@@ -1753,6 +1647,7 @@ color: #FFFFFF;
         transition: all 0.5s ease-out;
         pointer-events: none;
         margin-left: 0%;
+        margin-top: 4%;
     }
     .nav-links.open{
         clip-path: circle(1000px at 90% -10%);
@@ -1789,14 +1684,6 @@ color: #FFFFFF;
         opacity: 1;
     }
     video {
-        /* z-index: -1;
-        position: absolute;
-        top: 0;
-        left: 0;
-        display: block;
-        width: 100%;
-        object-fit:fill;
-        height: 35%; */
         display: none;
       }
       .brand{
@@ -2043,71 +1930,59 @@ margin-top: 0%;
       
       .about
       {
-       margin-top: 9%;
+       
+        background: #2B2B2B;
+        margin-top: 30%;
         display: flex;
         align-items: center;
         justify-content: center;
-        flex-direction: row;
-        margin-bottom: 4%;
-        margin-left: 8%;
-      }
-      
-      .rectangle
-      {
-        margin-top: -105%;
-        margin-left: -6%;
-        width: 130px;
-        height: 130px;
-        background: #050D24;
+        flex-direction: column;
+border-radius: 10px;
+        margin-bottom: 10%;
       }
       .passport-pic
       {
-      width: 462px;
-      height: 481px;
-      background: #050D24;
-      background: url("/public/images/p1.png");
-      background-size: 90px,90px;
-      background-repeat: no-repeat;
-      background-position: 20px 25px ;
-      border-radius: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: -13%;
       }
-      .rectangle-shadow
+      .passport-pic img
       {
-      width: 198px;
-      height: 185px;
-      background: rgba(5, 13, 36, 0.2);
-      }
-      .about-text
-      {
-        margin-left: 3%;
-        margin-top: 17%;
+        -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+      width: 50%;
       }
       .about-heading
       {
-      font-family: 'Leiko';
-      font-style: normal;
-      font-weight: 150;
-      font-size: 40px;
-      color: #FFFFFF;
-      display: flex;
-      justify-content: left;
+        text-align: center;
+        margin-top: 3%;
+        font-family: 'Leiko';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 50px;
+        color: #FFFFFF;
       }
       .about-lines
       {
+        display: none;
+      }
+      .phone-about-lines
+      {
+        display: block;
+        text-align: center;
+        margin-top: 3%;
       font-family: 'Poppins';
       font-style: normal;
-      font-weight: 100;
-      font-size: 10px;
-      line-height: 48px;
+      font-weight: normal;
+      font-size: 20px;
       color: #FFFFFF;
+      line-height: 1.5;
+      margin-bottom: 15%;
       }
       .Expertise-sections
       {
-      /* margin-bottom: 8%;
-        
-      
-      box-shadow: 0 0 20px #7900E0;
-      border-radius: 46px; */
+    
       display: none;
       }
       .expertise-heading
@@ -2154,10 +2029,7 @@ margin-top: 0%;
       }
       .softwares
       {
-        /* display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column; */
+       
         display: none;
       }
       .softwares_head
@@ -2243,6 +2115,10 @@ margin-top: 0%;
       border-radius: 10px;
       border: transparent;
       }
+      #progress
+      {
+       display: none;
+      }
 }
 @media screen and (max-width: 470px){
     body
@@ -2269,11 +2145,17 @@ margin-top: 0%;
      }
      .burger-background
      {
-         margin-top: 5%;
-         min-width: 9%;
-         min-height: 8%;
+         display:block;
+         position: absolute;
+         margin-top: 7%;
+        margin-left: 88%;
+         background: #7900E0;
+         min-width: 10%;
+         min-height: 6%;
          border-radius: 14px;
+         box-shadow: 0 0 30px #7900E0;
      }
+     
      .nav-links{
          position: fixed;
          background: #7900E0;
@@ -2285,6 +2167,7 @@ margin-top: 0%;
          transition: all 0.5s ease-out;
          pointer-events: none;
          margin-left: 0%;
+         margin-top: 4%;
      }
      .nav-links.open{
          clip-path: circle(1000px at 90% -10%);
@@ -2321,14 +2204,6 @@ margin-top: 0%;
          opacity: 1;
      }
      video {
-         /* z-index: -1;
-         position: absolute;
-         top: 0;
-         left: 0;
-         display: block;
-         width: 100%;
-         object-fit:fill;
-         height: 35%; */
          display: none;
        }
        .brand{
@@ -2397,12 +2272,6 @@ margin-top: 0%;
        }
        .read
        {
-       /* color: #7900E0;
-       margin-left: 3.3%;
-       margin-top: -2%;
-       font-family: 'Poppins';
-       font-style: normal;
-       font-size: 6px; */
        display: none;
        }
        
@@ -2574,72 +2443,60 @@ margin-top: 0%;
        }
        
        .about
-       {
-        margin-top: 9%;
-         display: flex;
-         align-items: center;
-         justify-content: center;
-         flex-direction: row;
-         margin-bottom: 4%;
-         margin-left: 8%;
-       }
+      {
        
-       .rectangle
-       {
-         margin-top: -105%;
-         margin-left: -6%;
-         width: 130px;
-         height: 130px;
-         background: #050D24;
-       }
-       .passport-pic
-       {
-       width: 462px;
-       height: 481px;
-       background: #050D24;
-       background: url("/public/images/p1.png");
-       background-size: 90px,90px;
-       background-repeat: no-repeat;
-       background-position: 20px 25px ;
-       border-radius: 50px;
-       }
-       .rectangle-shadow
-       {
-       width: 198px;
-       height: 185px;
-       background: rgba(5, 13, 36, 0.2);
-       }
-       .about-text
-       {
-         margin-left: 3%;
-         margin-top: 17%;
-       }
-       .about-heading
-       {
-       font-family: 'Leiko';
-       font-style: normal;
-       font-weight: 150;
-       font-size: 40px;
-       color: #FFFFFF;
-       display: flex;
-       justify-content: left;
-       }
-       .about-lines
-       {
-       font-family: 'Poppins';
-       font-style: normal;
-       font-weight: 100;
-       font-size: 10px;
-       line-height: 48px;
-       color: #FFFFFF;
-       }
+        background: #2B2B2B;
+        margin-top: 30%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+border-radius: 10px;
+        margin-bottom: 10%;
+      }
+      .passport-pic
+      {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: -13%;
+      }
+      .passport-pic img
+      {
+        -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+      width: 35%;
+      
+      }
+      .about-heading
+      {
+        text-align: center;
+        margin-top: 3%;
+        font-family: 'Leiko';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 45px;
+        color: #FFFFFF;
+      }
+      .about-lines
+      {
+        display: none;
+      }
+      .phone-about-lines
+      {
+        display: block;
+        text-align: center;
+        margin-top: 3%;
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      color: #FFFFFF;
+      line-height: 1.5;
+      margin-bottom: 15%;
+      }
        .Expertise-sections
        {
-       /* margin-bottom: 8%;
-         
-       
-       box-shadow: 0 0 20px #7900E0;
-       border-radius: 46px; */
        display: none;
        }
        .expertise-heading
@@ -2686,10 +2543,6 @@ margin-top: 0%;
        }
        .softwares
        {
-         /* display: flex;
-         align-items: center;
-         justify-content: center;
-         flex-direction: column; */
          display: none;
        }
        .softwares_head
@@ -2775,6 +2628,10 @@ margin-top: 0%;
        box-shadow: 0 0 20px #7900E0;
        border-radius: 10px;
        border: transparent;
+       }
+       #progress
+       {
+        display: none;
        }
 }
 
