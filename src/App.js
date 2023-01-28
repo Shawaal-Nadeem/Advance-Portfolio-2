@@ -141,7 +141,7 @@ function App() {
           </p>
 
           <p className="read">Read More...</p>
-         <a href="https://wa.me/03004356110"> <button className="hirebtn">Hire Me</button></a>
+         <a href="https://wa.me/03004256110"> <button className="hirebtn">Hire Me</button></a>
         </div>
       </div>
       <div className="portfolio" id="portfolio">
