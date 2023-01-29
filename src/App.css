@@ -252,13 +252,21 @@ video {
       font-size: 20px;
       font-weight: 700;
       line-height: 60px;
-      color: white;
       box-shadow: 0 0 30px #7900E0;  
+    }
+    .gd
+    {
+      color: #FFFFFF;
+    }
+    .gd:hover
+    {
+      color: #7900E0;
     }
     .GraphicDesign:hover
     {
         background: transparent;
         color: #7900E0;
+        cursor: pointer;
     }
       .portfolioButtons
       {
