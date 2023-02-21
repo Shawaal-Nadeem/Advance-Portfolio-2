@@ -4,6 +4,7 @@ function Footer() {
   
   return (
     <div>
+      
  <div className="contact-section" id="contact">
         <br />
         <h4 className="contact-head">Contact</h4>
@@ -16,7 +17,7 @@ function Footer() {
                 target="_blank"
                 rel="author"
               >
-                <i class="fab fa-facebook"></i>
+                <i class="fa fa-facebook-f"></i>
               </a>
 
               <a
@@ -25,7 +26,7 @@ function Footer() {
                 target="_blank"
                 rel="author"
               >
-                <i class="fab fa-instagram"></i>
+                <i class="fa fa-instagram"></i>
               </a>
               <a
                 class="social-icon linkedin"
@@ -33,7 +34,7 @@ function Footer() {
                 target="_blank"
                 rel="author"
               >
-                <i class="fab fa-linkedin"></i>
+                <i class="fa fa-linkedin"></i>
               </a>
               <a
                 class="social-icon youtube"
@@ -41,7 +42,7 @@ function Footer() {
                 target="_blank"
                 rel="author"
               >
-                <i class="fab fa-youtube"></i>
+                <i class="fa fa-youtube"></i>
               </a>
               <a
                 class="social-icon github"
@@ -49,7 +50,7 @@ function Footer() {
                 target="_blank"
                 rel="author"
               >
-                <i class="fab fa-github"></i>
+                <i class="fa fa-github"></i>
               </a>
             </div>
           </div>
